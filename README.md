@@ -6,7 +6,7 @@ Method: HTTP Post
 
 Description: Execute one or more image transformation operations, in-order, on the specified image.
 
-Request Body Parameters:
+Request Body Parameters (JSON):
 
 url: The HTTP URL of the image to transform
 
