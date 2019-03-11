@@ -12,14 +12,14 @@ url: The HTTP URL of the image to transform
 
 operations: a list of one or more image transformation operations, and each operation is specified as a string which matches the supported vocabulary which is described below.
 
-Request body example:
+## Request body example:
 
 {
 "url":"https://i.imgur.com/AOXD2P4.jpg", 
 "operations":[“flipVertical”, “rotateRight”, “resize,88”]
 }
 
-Operation vocabulary and usage:
+## Operation vocabulary and usage:
 
 flipVertical: This flips the image vertically.
 
