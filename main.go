@@ -7,7 +7,6 @@ package main
 import (
 	"bytes"
 	"encoding/json"
-	"fmt"
 	"image"
 	"image/color"
 	"image/jpeg"
@@ -35,22 +34,6 @@ type ErrorMessage struct {
 
 func main() {
 	server()
-	// client()
-}
-
-func client() {
-	message := map[string]interface{}{
-		"url":        "https://i.imgur.com/AOXD2P4.jpg",
-		"operations": [4]string{"rotate,2", "flipVertical", "grayscale", "resize,50,80"},
-	}
-	bytesRep, err := json.Marshal(message)
-	resp, err := http.Post("http://127.0.0.1:8000/process", "application/json", bytes.NewBuffer(bytesRep))
-	if err != nil {
-		log.Fatal(err)
-	}
-	body, err := ioutil.ReadAll(resp.Body)
-	fmt.Println("Response: ", string(body))
-	resp.Body.Close()
 }
 
 func server() {
